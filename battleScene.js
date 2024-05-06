@@ -44,7 +44,8 @@ function initBattle() {
 
       if (draggle.health <= 0) {
         queue.push(() => {
-          draggle.faint()
+          draggle.faint();
+          window.parent.postMessage('win', '*');
         })
         queue.push(() => {
           // fade back to black
